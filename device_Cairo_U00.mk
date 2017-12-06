@@ -5,8 +5,8 @@ $(call inherit-product, build/target/product/full_base_telephony.mk)
 #bionic/libc/zoneinfo/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_MODEL="" \
-    TARGET_DEVICE=""
+    PRODUCT_MODEL="CRO-U00" \
+    TARGET_DEVICE="CRO-U00"
 
 PRODUCT_NAME := full_Cairo_U00
 PRODUCT_DEVICE := Cairo_U00

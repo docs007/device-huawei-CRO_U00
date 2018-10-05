@@ -1,1 +1,2 @@
-# device_Huawei_Cairo_U00
+# TWRP DEVICE TREE 
+Huawei_Cairo_U00

@@ -1,5 +1,5 @@
 # Inherit device configuration
-$(call inherit-product, device/Huawei/Cairo_U00/device_Cairo_U00.mk)
+$(call inherit-product, device/huawei/Cairo_U00/device_Cairo_U00.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := Cairo_U00

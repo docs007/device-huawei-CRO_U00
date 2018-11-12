@@ -14,6 +14,9 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/huawei/CRO_U00
-
-PRODUCT_MAKEFILES := $(LOCAL_PATH)/omni_CRO_U00.mk
+# Kernel
+TARGET_PREBUILT_KERNEL := device/huawei/CRO_U00/kernel
+BOARD_KERNEL_CMDLINE := bootopt=64S3,32S1,32S1 androidboot.selinux=permissive
+BOARD_KERNEL_BASE := 0x80000000
+BOARD_KERNEL_PAGESIZE := 2048
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x04000000 --tags_offset 0x0e000000

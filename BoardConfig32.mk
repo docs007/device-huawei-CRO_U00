@@ -14,6 +14,22 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/huawei/CRO_U00
+# Architecture
+TARGET_ARCH := arm
+TARGET_ARCH_VARIANT := armv7-a-neon
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
+ifneq ($(filter msm8974 msm8227 msm8627 msm8230 apq8030 msm8630 msm8930 msm8930AA apq8060A msm8260A msm8660A msm8960 MPQ8064 msm8674 msm8274 apq8084,$(TARGET_BOARD_PLATFORM)),)
+TARGET_CPU_VARIANT := krait
+TARGET_RECOVERY_QCOM_RTC_FIX := true
+else 
+TARGET_CPU_VARIANT := cortex-a7
+endif
 
-PRODUCT_MAKEFILES := $(LOCAL_PATH)/omni_CRO_U00.mk
+# TWRP
+BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
+ifeq ($(TW_THEME),)
+TW_THEME := portrait_hdpi
+endif
+RECOVERY_SDCARD_ON_DATA := true
+RECOVERY_GRAPHICS_USE_LINELENGTH := true

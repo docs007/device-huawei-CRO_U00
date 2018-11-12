@@ -14,6 +14,12 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/huawei/CRO_U00
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
-PRODUCT_MAKEFILES := $(LOCAL_PATH)/omni_CRO_U00.mk
+PRODUCT_COPY_FILES += device/huawei/CRO_U00/kernel:kernel
+
+PRODUCT_DEVICE := CRO_U00
+PRODUCT_NAME := omni_CRO_U00
+PRODUCT_BRAND := Huawei
+PRODUCT_MODEL := CRO-U00
+PRODUCT_MANUFACTURER := Huawei
